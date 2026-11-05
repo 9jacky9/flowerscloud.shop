@@ -1,0 +1,344 @@
+/* Art Nouveau Stained Glass Conservatory & Iris Bloom Theme (Dark Mode) */
+:root {
+  --bg-main: #0B0314;
+  --bg-card: rgba(25, 11, 46, 0.75);
+  --bg-subtle: rgba(139, 92, 246, 0.08);
+  --text-main: #FDF4FF;
+  --text-muted: #D8B4FE;
+  --primary: #D946EF;
+  --primary-hover: #C026D3;
+  --primary-light: rgba(217, 70, 239, 0.15);
+  --accent-iris: #8B5CF6;
+  --accent-teal: #06B6D4;
+  --accent-gold: #F59E0B;
+  --border-color: rgba(139, 92, 246, 0.35);
+  --border-gold: rgba(245, 158, 11, 0.4);
+  --font-serif: "Didot", "Bodoni MT", "Cinzel", "Songti SC", serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Segoe UI", sans-serif;
+  --radius: 24px;
+  --shadow: 0 8px 32px rgba(15, 3, 20, 0.8);
+  --shadow-hover: 0 12px 40px rgba(217, 70, 239, 0.25);
+  --glow-iris: 0 0 20px rgba(139, 92, 246, 0.4);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background-color: var(--bg-main);
+  background-image: 
+    radial-gradient(ellipse at 10% 20%, rgba(139, 92, 246, 0.18) 0%, transparent 50%),
+    radial-gradient(ellipse at 90% 80%, rgba(217, 70, 239, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(6, 182, 212, 0.1) 0%, transparent 60%);
+  background-attachment: fixed;
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  line-height: 1.7;
+}
+
+.header {
+  background: rgba(11, 3, 20, 0.85);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #FFF;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-shadow: 0 0 12px var(--primary);
+}
+.logo::before {
+  content: "✧";
+  color: var(--primary);
+  font-size: 1.6rem;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.nav-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+.nav-links a:hover, .nav-links a.active {
+  color: #FFF;
+  text-shadow: 0 0 8px var(--primary);
+}
+a:visited { color: var(--accent-iris); }
+.btn-nav {
+  background: linear-gradient(135deg, var(--accent-iris), var(--primary));
+  color: #fff !important;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(217, 70, 239, 0.35);
+}
+
+/* Reverse Split Hero */
+.hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 70px 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.hero-art-container {
+  background: rgba(25, 11, 46, 0.6);
+  border-radius: 40px 40px 16px 16px;
+  padding: 20px;
+  border: 2px solid var(--border-gold);
+  box-shadow: var(--shadow), var(--glow-iris);
+  position: relative;
+  overflow: hidden;
+}
+.hero-art-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 40px 40px 16px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  pointer-events: none;
+}
+.hero-svg { width: 100%; height: 350px; display: block; }
+
+.hero-tag {
+  display: inline-block;
+  background: var(--primary-light);
+  color: var(--primary);
+  border: 1px solid var(--border-color);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+.hero h1 {
+  font-family: var(--font-serif);
+  font-size: 2.7rem;
+  line-height: 1.25;
+  color: #FFF;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+.hero p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-bottom: 32px;
+}
+.hero-btns {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-iris), var(--primary));
+  color: #FFF;
+  padding: 14px 28px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 4px 20px rgba(217, 70, 239, 0.4);
+  transition: all 0.25s;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(217, 70, 239, 0.6);
+}
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-main);
+  border: 1px solid var(--border-gold);
+  padding: 12px 26px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.25s;
+}
+.btn-secondary:hover {
+  background: rgba(245, 158, 11, 0.15);
+  border-color: var(--accent-gold);
+}
+
+/* Lancet Arch Window Features */
+.section { padding: 70px 24px; max-width: 1200px; margin: 0 auto; }
+.section-header { text-align: center; margin-bottom: 48px; }
+.section-title { font-family: var(--font-serif); font-size: 2.2rem; color: #FFF; margin-bottom: 12px; }
+.section-sub { color: var(--text-muted); font-size: 1.05rem; }
+
+.lancet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+}
+.lancet-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  border: 1.5px solid var(--border-color);
+  border-radius: 36px 36px 12px 12px;
+  padding: 36px 24px 28px;
+  box-shadow: var(--shadow);
+  position: relative;
+  transition: all 0.3s;
+}
+.lancet-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--primary);
+  box-shadow: var(--shadow-hover);
+}
+.lancet-card::before {
+  content: "❈";
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--accent-gold);
+  font-size: 1rem;
+}
+.lancet-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.25), rgba(217, 70, 239, 0.25));
+  border: 1px solid var(--border-color);
+  color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin: 10px auto 20px;
+}
+.lancet-card h3 { font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 12px; color: #FFF; text-align: center; }
+.lancet-card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; text-align: center; }
+
+/* Lancet Arch Pricing Cards */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+.price-card {
+  background: var(--bg-card);
+  border: 2px solid var(--border-color);
+  border-radius: 50px 50px 16px 16px;
+  padding: 40px 28px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.price-card.featured {
+  border: 2px solid var(--primary);
+  background: linear-gradient(180deg, rgba(139, 92, 246, 0.2) 0%, rgba(25, 11, 46, 0.8) 100%);
+  box-shadow: 0 0 30px rgba(217, 70, 239, 0.3);
+}
+.price-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, var(--accent-gold), var(--primary));
+  color: #FFF;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 16px;
+  border-radius: 12px;
+  letter-spacing: 1px;
+}
+.price-card h3 { font-family: var(--font-serif); font-size: 1.45rem; margin-bottom: 8px; color: #FFF; }
+.price-num { font-size: 2.4rem; font-weight: 800; color: #FFF; margin: 16px 0; text-shadow: 0 0 10px var(--primary); }
+.price-num span { font-size: 0.9rem; font-weight: 400; color: var(--text-muted); }
+.price-features { list-style: none; text-align: left; margin: 24px 0 32px; padding: 0 10px; }
+.price-features li { padding: 8px 0; border-bottom: 1px solid rgba(139, 92, 246, 0.2); color: var(--text-muted); font-size: 0.95rem; }
+.price-features li::before { content: "✧ "; color: var(--accent-gold); font-weight: bold; }
+
+/* Velvet Plaque Testimonials */
+.test-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+.plaque {
+  background: rgba(30, 15, 55, 0.6);
+  border: 1px solid var(--border-gold);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+.plaque::before {
+  content: "“";
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  color: var(--border-gold);
+  position: absolute;
+  top: 10px;
+  left: 18px;
+  line-height: 1;
+  opacity: 0.5;
+}
+.plaque p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; position: relative; z-index: 1; padding-left: 24px; }
+.plaque-author { font-weight: 700; color: #FFF; font-size: 0.95rem; }
+.plaque-role { font-size: 0.8rem; color: var(--accent-teal); }
+
+/* FAQ */
+.faq-list { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
+.faq-item {
+  background: var(--bg-card);
+  border-radius: 14px;
+  border: 1px solid var(--border-color);
+  padding: 22px 26px;
+}
+.faq-q { font-weight: 700; font-size: 1.1rem; color: #FFF; margin-bottom: 8px; }
+.faq-a { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; }
+
+/* Footer */
+.footer {
+  background: rgba(8, 2, 16, 0.95);
+  border-top: 1px solid var(--border-color);
+  padding: 50px 24px 24px;
+  margin-top: 60px;
+}
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+.footer-logo { font-family: var(--font-serif); font-size: 1.5rem; font-weight: bold; color: #FFF; margin-bottom: 12px; text-shadow: 0 0 10px var(--primary); }
+.footer-links { display: flex; flex-direction: column; gap: 8px; }
+.footer-links a { color: var(--text-muted); text-decoration: none; font-size: 0.95rem; }
+.footer-links a:hover { color: #FFF; }
+.footer-bottom { text-align: center; border-top: 1px solid rgba(139, 92, 246, 0.2); margin-top: 40px; padding-top: 20px; font-size: 0.85rem; color: var(--text-muted); }
+
+@media (max-width: 768px) {
+  .hero { grid-template-columns: 1fr; padding: 40px 16px; }
+  .footer-container { grid-template-columns: 1fr; }
+  .nav-links { gap: 12px; }
+}

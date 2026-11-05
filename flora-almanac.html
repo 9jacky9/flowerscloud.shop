@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>繁花百科 - 花云</title>
+<meta name="description" content="花云官方技术文集与性能评测专栏，提供网络加速、跨国专线与客户端调优深度指南。">
+<link rel="stylesheet" href="style.css">
+<style>
+
+.article-container { max-width: 860px; margin: 40px auto; padding: 0 20px; }
+.article-main { background: var(--bg-card); backdrop-filter: blur(12px); border-radius: 20px; border: 1px solid var(--border-color); padding: 40px; box-shadow: var(--shadow); }
+.article-badge { display: inline-block; background: var(--primary-light); color: var(--primary); border: 1px solid var(--border-color); padding: 4px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; margin-bottom: 16px; }
+.article-main h1 { font-family: var(--font-serif); font-size: 2.2rem; color: #FFF; margin-bottom: 12px; line-height: 1.3; }
+.article-meta { color: var(--text-muted); font-size: 0.85rem; border-bottom: 1px solid rgba(139, 92, 246, 0.25); padding-bottom: 20px; margin-bottom: 24px; }
+.article-content h2 { font-family: var(--font-serif); font-size: 1.35rem; color: #FFF; margin: 32px 0 16px; border-left: 4px solid var(--primary); padding-left: 12px; }
+.article-content p { color: var(--text-muted); font-size: 1.02rem; line-height: 1.85; margin-bottom: 20px; }
+.article-content a { color: var(--primary); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.article-cta-box { margin-top: 40px; background: rgba(30, 15, 55, 0.6); border: 1.5px solid var(--border-color); border-radius: 16px; padding: 30px; text-align: center; }
+.article-cta-box h3 { font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 8px; color: #FFF; }
+.article-cta-box p { color: var(--text-muted); margin-bottom: 20px; }
+
+.hub-hero { text-align: center; padding: 60px 20px 40px; max-width: 800px; margin: 0 auto; }
+.hub-hero h1 { font-size: 2.4rem; margin-bottom: 16px; color: var(--text-main); }
+.hub-hero p { color: var(--text-muted); font-size: 1.1rem; line-height: 1.6; }
+.hub-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; max-width: 1200px; margin: 0 auto 60px; padding: 0 20px; }
+.hub-card { background: var(--bg-card); border-radius: var(--radius); border: 1px solid var(--border-color); padding: 28px; box-shadow: var(--shadow); display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.2s, box-shadow 0.2s; }
+.hub-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
+.hub-card-tag { display: inline-block; align-self: flex-start; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 700; background: var(--primary-light); color: var(--primary); margin-bottom: 12px; }
+.hub-card h3 { font-size: 1.25rem; margin-bottom: 12px; line-height: 1.4; }
+.hub-card h3 a { color: var(--text-main); text-decoration: none; }
+.hub-card h3 a:hover { color: var(--primary); }
+.hub-card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; flex-grow: 1; }
+.hub-read-more { color: var(--primary); font-weight: 600; text-decoration: none; font-size: 0.9rem; }
+.hub-read-more:hover { text-decoration: underline; }
+</style>
+</head>
+<body class="theme-flower-stainedglass">
+<header class="header">
+  <div class="nav-container">
+    <a href="index.html" class="logo">花云</a>
+    <nav class="nav-links">
+      <a href="index.html">首页</a>
+      <a href="flora-almanac.html" class="active">繁花百科</a>
+      <a href="about.html">关于我们</a>
+      <a href="https://ww012.twilightaff.com/#/?code=A56DH1Af" class="btn-nav" rel="nofollow" target="_blank">立即接入</a>
+    </nav>
+  </div>
+</header>
+<main class="container">
+  <div class="hub-hero">
+    <h1>繁花百科</h1>
+    <p>收录花云全球网络架构实验室最新评测报告、跨国传输优化技巧与前沿专网协议全解。</p>
+  </div>
+  <div class="hub-grid">
+    <div class="hub-card">
+  <div class="hub-card-tag">花云文集</div>
+  <h3><a href="flora-almanac-network-architecture-review.html">花云琉璃温室全球骨干网络架构年终深度综述</a></h3>
+  <p>全面评测花云新一代跨洋多线BGP专线拓扑、住宅IP轮转池与高可用容灾中继表现。</p>
+  <a href="flora-almanac-network-architecture-review.html" class="hub-read-more">阅读深度评测全文 &rarr;</a>
+</div>
+<div class="hub-card">
+  <div class="hub-card-tag">花云文集</div>
+  <h3><a href="anycast-dns-cdn-edge-caching-principles.html">Anycast多线DNS解析与CDN边缘缓存协同加速解析</a></h3>
+  <p>深入探究分布式Anycast就近路由寻址机制对国际Web应用端到端延迟的压制优化。</p>
+  <a href="anycast-dns-cdn-edge-caching-principles.html" class="hub-read-more">阅读深度评测全文 &rarr;</a>
+</div>
+<div class="hub-card">
+  <div class="hub-card-tag">花云文集</div>
+  <h3><a href="consumer-privacy-protection-boundaries.html">网络传输端到端零日志隐私加密边界深度探讨</a></h3>
+  <p>详解前沿RAM无盘转发架构、前向安全性加密算法与商业网络代理的隐私合规基准。</p>
+  <a href="consumer-privacy-protection-boundaries.html" class="hub-read-more">阅读深度评测全文 &rarr;</a>
+</div>
+<div class="hub-card">
+  <div class="hub-card-tag">花云文集</div>
+  <h3><a href="cross-border-online-gaming-packet-pacing.html">跨国多人在线竞技游戏高精度时钟包起搏优化策略</a></h3>
+  <p>针对FPS与MOBA类跨国对战中严苛抖动要求的网络队列算法与UDP加速调优。</p>
+  <a href="cross-border-online-gaming-packet-pacing.html" class="hub-read-more">阅读深度评测全文 &rarr;</a>
+</div>
+<div class="hub-card">
+  <div class="hub-card-tag">花云文集</div>
+  <h3><a href="generative-ai-model-low-latency-tuning.html">生成式AI模型大语言对话超低延迟传输链路调优</a></h3>
+  <p>从HTTP/2与HTTP/3流式分块传输特性出发，深度降低跨国大语言模型首字回包时延。</p>
+  <a href="generative-ai-model-low-latency-tuning.html" class="hub-read-more">阅读深度评测全文 &rarr;</a>
+</div>
+<div class="hub-card">
+  <div class="hub-card-tag">花云文集</div>
+  <h3><a href="inter-datacenter-fiber-multipath-failover.html">跨数据中心光纤多路径自愈容灾切换机制详解</a></h3>
+  <p>探讨海底光缆偶发断裂或中间节点拥塞时，现代自愈网络如何在毫秒内完成平滑倒换。</p>
+  <a href="inter-datacenter-fiber-multipath-failover.html" class="hub-read-more">阅读深度评测全文 &rarr;</a>
+</div>
+  </div>
+</main>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-col">
+      <div class="footer-logo">花云</div>
+      <p>物理级跨国网络加速与企业专线中继服务商，致力于为全球用户提供全天候端到端超低延迟加速体验。</p>
+    </div>
+    <div class="footer-col">
+      <h4>快速导航</h4>
+      <div class="footer-links">
+        <a href="sitemap.html">网站地图</a>
+        <a href="about.html">关于我们</a>
+        <a href="terms.html">服务条款</a>
+        <a href="privacy.html">隐私政策</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 花云 (flowerscloud.shop). 版权所有，保留所有权利。</p>
+  </div>
+</footer>
+</body>
+</html>
